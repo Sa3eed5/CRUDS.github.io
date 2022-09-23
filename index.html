@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/MyProjectStyle.css" />
+    <title>CRUDS</title>
+  </head>
+
+  <body>
+    <div class="crud">
+      <header>
+        <h2>cruds</h2>
+        <p class="element"></p>
+      </header>
+      <!--------------------- end of header section -->
+
+      <section class="inputs">
+        <input type="text" placeholder="title" id="title" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="price"
+            id="price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="taxes"
+            id="taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="ads"
+            id="ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="discount"
+            id="discount"
+          />
+          <small id="total"> </small>
+        </div>
+        <!-------end of price row :-->
+        <input type="number" placeholder="count" id="count" />
+        <input type="text" placeholder="category" id="category" />
+        <button id="submit" type="submit">Create</button>
+      </section>
+      <!-----------------------end of inputs section-->
+
+      <section class="outputs">
+        <div class="searchContainer">
+          <input
+            type="text"
+            id="search"
+            placeholder="search"
+            onkeyup="searchData(this.value)"
+          />
+          <div class="searchBtn">
+            <button onclick=" getSearchMood(this.id)" id="searchTitle">
+              Search by Title
+            </button>
+            <button onclick=" getSearchMood(this.id)" id="searchCategory">
+              Search by Category
+            </button>
+          </div>
+        </div>
+        <!------------ end of search container-->
+        <div id="deleteALL" style="margin: 20px 0"></div>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+      <!----------------------- end of outputs section-->
+    </div>
+    <!-- end of  all crud -->
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            
+            <stop offset="0%" style="stop-color: #b06afe" />
+            <stop offset="100%" style="stop-color: #40a6ff" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#grad1)"
+         fill-opacity="1" 
+         d="M0,288L8.6,266.7C17.1,245,34,203,51,165.3C68.6,128,86,96,103,117.3C120,139,137,213,154,224C171.4,235,189,181,206,160C222.9,139,240,149,257,181.3C274.3,213,291,267,309,277.3C325.7,288,343,256,360,245.3C377.1,235,394,245,411,224C428.6,203,446,149,463,138.7C480,128,497,160,514,176C531.4,192,549,192,566,176C582.9,160,600,128,617,122.7C634.3,117,651,139,669,138.7C685.7,139,703,117,720,90.7C737.1,64,754,32,771,64C788.6,96,806,192,823,229.3C840,267,857,245,874,208C891.4,171,909,117,926,106.7C942.9,96,960,128,977,128C994.3,128,1011,96,1029,69.3C1045.7,43,1063,21,1080,21.3C1097.1,21,1114,43,1131,42.7C1148.6,43,1166,21,1183,21.3C1200,21,1217,43,1234,69.3C1251.4,96,1269,128,1286,133.3C1302.9,139,1320,117,1337,106.7C1354.3,96,1371,96,1389,85.3C1405.7,75,1423,53,1431,42.7L1440,32L1440,320L1431.4,320C1422.9,320,1406,320,1389,320C1371.4,320,1354,320,1337,320C1320,320,1303,320,1286,320C1268.6,320,1251,320,1234,320C1217.1,320,1200,320,1183,320C1165.7,320,1149,320,1131,320C1114.3,320,1097,320,1080,320C1062.9,320,1046,320,1029,320C1011.4,320,994,320,977,320C960,320,943,320,926,320C908.6,320,891,320,874,320C857.1,320,840,320,823,320C805.7,320,789,320,771,320C754.3,320,737,320,720,320C702.9,320,686,320,669,320C651.4,320,634,320,617,320C600,320,583,320,566,320C548.6,320,531,320,514,320C497.1,320,480,320,463,320C445.7,320,429,320,411,320C394.3,320,377,320,360,320C342.9,320,326,320,309,320C291.4,320,274,320,257,320C240,320,223,320,206,320C188.6,320,171,320,154,320C137.1,320,120,320,103,320C85.7,320,69,320,51,320C34.3,320,17,320,9,320L0,320Z">
+      
+         >
+        </path>
+      </svg>
+    </footer>
+
+
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--- type.js-->
+
+    <script src="js/MyProject.js"></script>
+  </body>
+</html>

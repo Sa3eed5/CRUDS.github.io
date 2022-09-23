@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #222;
+  color: #fff;
+  font-family: system-ui;
+}
+.crud {
+  width: 85%;
+  margin: auto;
+  background: url('/images/stars1.png')no-repeat ;
+  background-size: ;
+
+}
+header {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+input {
+  width: 100%;
+  height: 35px;
+  outline: none !important;
+  border: none !important;
+  background: #111;
+  margin: 5px 0;
+  border-radius: 20px;
+  padding: 4px;
+  color: #fff;
+}
+input:focus {
+  background: #000;
+  transform: scale(1.1);
+}
+input:hover {
+  letter-spacing: 1px;
+}
+.price input {
+  width: 20%;
+  margin: 3px;
+}
+#total {
+  margin-left: 3px;
+  padding: 5px 3px;
+  border-radius: 4px;
+  background: #a00d02;
+}
+#total::before {
+  content: "Total: ";
+}
+button {
+  border: none !important;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: rgb(43, 12, 43);
+  color: #fff;
+  transition: 0.5s;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 3px 0;
+}
+button:hover {
+  background: rgb(150, 2, 150);
+  color: #fff;
+  letter-spacing: 2.5px;
+}
+
+.searchBtn {
+  display: flex;
+  justify-content: space-between;
+}
+.searchBtn button {
+  width: 45%;
+}
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+table th {
+  text-transform: uppercase;
+}
+table #tbody tr th   {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+th,
+td {
+  padding: 5px;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+
+
+@media (max-width: 660px) {
+  html {
+    font-size: 70%;
+  }
+  
+  table #tbody tr th   {
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+  table #tbody button
+  {
+    width: auto;
+    border-radius: 5px;
+
+  }
+  input{
+font-size: 14px;
+  }
+  button
+  {
+    font-size: 12px;
+  }
+  header{
+    font-size: 13px;
+  }
+  #total::before{
+    margin: 15px 15px;
+    font-size: 13px;
+    height: 2px;
+  }
+  #total{
+    font-size: 13px;
+    margin: 5px ;
+    
+  }
+}
